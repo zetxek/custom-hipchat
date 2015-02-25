@@ -1,0 +1,38 @@
+<html>
+<head>
+<link rel="stylesheet" href="auiiconfonts.css">
+<!-- Prettify JS and CSS -->
+<script type='text/javascript'>
+var imagePreviewOpened = '%1$@';
+var imagePreviewClosed = '%2$@';
+</script>
+<script type='text/javascript'>%3$@</script>
+<style>%4$@</style>
+<!-- Base chat CSS and JS -->
+<script type='text/javascript'>%5$@</script>
+<style id='generic-styles'>%6$@</style>
+<!-- Device-specific CSS and JS -->
+<script type='text/javascript'>%7$@</script>
+<style id='device-styles'>%8$@</style>
+<!-- Additional override point -->
+<style id='override-styles'></style>
+</head>
+<body onClick='setTimeout(handleBodyClick, 0);'>
+   <div id='tooltip' onclick='this.style.display = \"none\"' class='tooltip'>
+       <a href='action:resend'>This message may not have been sent successfully. Tap to attempt to resend.</a>
+   </div>
+   <div id='load_history_button'>
+       <form action='action:load_history' method='POST'><input type='submit' value='Load more history' /></form>
+   </div>
+   <div id='loading_spinner'>
+       <img src='spinner_chat.gif' />
+   </div>
+   <div id='view_history' class='historyLink'></div>
+   <div id='unhide_history' class='historyLink'>
+   <span style='color: #3B73AF; font-size: 14px;'>&#x25be;</span>&nbsp;&nbsp;
+   <a id='unhide_history_link' href='actionscript:;'>Show chat history</a>
+   </div>
+   <div id='chat_text'></div>
+   <div id='chat_state' class='chatBlock infoBlock'></div>
+</body>
+</html>

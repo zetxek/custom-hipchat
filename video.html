@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <style>
+            p, div { font-family: HelveticaNeue-Light, Helvetica Neue Light, Helvetica, Arial, Lucida Grande, sans-serif; font-size: 13px; color: #999999; }
+            a { color: #3B73AF; }
+            img { vertical-align: middle; }
+            #photo { height: 36px; width: 36px; }
+            #spinner { height: 35px; width: 35px; }
+            #spinnerDiv { margin-top: 17px; }
+            #user { margin-top: 3px }
+            .content { text-align: center; }
+            .user { color: #FFFFFF; font-family: HelveticaNeue, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;}
+        </style>
+    <body>
+        <script type='text/javascript'>
+            function showMessage(msg) {
+                var node = document.getElementById('message');
+                node.innerHTML = msg;
+                node.style.display = '';
+            }
+            function hideMessage(msg) {
+                var node = document.getElementById('message');
+                node.style.display = 'none';
+            }
+            function showUser(msg) {
+                var node = document.getElementById('user');
+                node.innerHTML = msg;
+                node.style.display = '';
+            }
+            function hideUser() {
+                var node = document.getElementById('user');
+                node.innerHTML = '';
+                node.style.display = 'none';
+            }
+            function showSpinner() {
+                var node = document.getElementById('spinner');
+                node.style.display = '';
+            }
+            function hideSpinner(msg) {
+                var node = document.getElementById('spinner');
+                node.style.display = 'none';
+            }
+        </script>
+        <div class='content'>
+            <div id='message' class='message'></div>
+            <div id='user' class='user'></div>
+            <div id='spinnerDiv'><img id='spinner' style='display: none;' src='spinner_video.gif' align='middle'/></div>
+        </div>
+    </body>
