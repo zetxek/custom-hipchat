@@ -20,9 +20,10 @@ li {
 a {
     color: #3572b0;
     text-decoration: none;
+    transition: all .1s ease;
 }
 a:hover {
-    text-decoration: underline;
+  color: #2ECBAC;
 }
 
 .systemMessage.green a {
@@ -50,28 +51,33 @@ table {
     border-collapse: collapse;
 }
 .chatBlock.them+.chatBlock.them, .scrollAnchor+.chatBlock.them, .preview+.chatBlock.them {
-    border-top: 1px solid #EFEFEF;
+
 }
 .chatBlock.them+.systemMessage.them {
 	border-top: none;
 }
 .chatBlock.me+.chatBlock.me, .preview+.chatBlock.me {
-    border-top: 1px solid #ffffff;
+
 }
 .systemMessage.red,
 .systemMessage.green,
 .systemMessage.purple,
 .systemMessage.gray,
 .systemMessage.yellow {
-    border-top: 1px solid #FFFFFF;
+
 }
 
 .systemMessage.yellow+.systemMessage.yellow {
-	/*border-top: 1px solid #EAEAEA;*/
-	border-top: 1px solid #FFFFFF;
+
 }
 .chatBlock .messageWrapper {
     margin: 1px 10px 0 10px;
+}
+
+.chatBlock {
+  background: #fefefe !important;
+  margin: 5px 10px !important;
+  border: none;
 }
 
 .chatBlock p.additionalLine {
@@ -116,8 +122,8 @@ table {
 }
 
 .me {
-    background-color: #E1EAF4;
-	border-top:1px solid #FFFFFF;
+  background-color: #F9F8FE !important;
+	border-top: 1;
 }
 
 .them {
@@ -129,11 +135,13 @@ table {
 }
 
 .messageBlock {
+  color: #3D3C40;
+  font-size: 1.1em;
 }
 
 .me .messageBlock {
-    vertical-align: middle;
-    margin-bottom: 4px;
+  vertical-align: middle;
+  margin-bottom: 4px;
 }
 
 .messageBlock .monospace {
@@ -184,8 +192,11 @@ table {
 }
 
 .nameBlock {
+  width: 400px;
     vertical-align: top;
-    text-align: right;
+    font-weight: bold;
+    text-align: left;
+    font-size: .9em;
 }
 
 .nameBlock p {
@@ -197,8 +208,13 @@ table {
 }
 
 .nameBlock a {
-    color: #707070;
-    text-decoration: none;
+  color: #666;
+  text-decoration: none;
+  transition: color .1s ease;
+}
+
+.nameBlock a:hover {
+  color: #27ae60;
 }
 
 .me .nameBlock p {
@@ -289,20 +305,30 @@ p.timeBlock {
 }
 
 .atTag {
-    color: #333;
     text-decoration: none;
     display: inline-block;
-    padding: 0 3px;
-    border: 1px solid #D0D0D0;
-    background-color: #F5F5F5;
-    -webkit-border-radius: 4px;
+    font-size: .9em;
+    color: #1abc9c;
+    padding: 0px 8px;
+    border:none;
+    border: 1px solid #1abc9c;
+    background: #fff;
+    border-radius: 30px;
+  }
+
+.atTag a:hover {
+  text-decoration: none;
+  color: #2ECBAC;
 }
 
 .atTagMe {
-    color: #fff;
-    padding: 1px 4px;
-    border:none;
-    background: #3572b0;
+  font-size: .9em;
+  color: #fff;
+  padding: 0px 8px;
+  border:none;
+  background: #e74c3c;
+  border-radius: 30px;
+  border: 1px solid #e74c3c;
 }
 
 .hexPreview {
@@ -370,7 +396,7 @@ p.hiddenImage a:hover {
 
 .preview {
     background-color: #F5F5F5;
-    border-top: 1px solid #FFFFFF;
+
 }
 .fileBlock .preview {
     background-color: inherit;
@@ -454,7 +480,7 @@ p.hiddenImage a:hover {
     font-family: monospace;
 }
 .truncated+.showHideLinkContainer {
-    border-top: 1px solid #efefef;
+
 }
 
 .prettyprinted {
